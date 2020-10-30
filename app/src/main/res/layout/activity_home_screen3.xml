@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeScreen3">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/top_navigation_constraint">
+
+        </FrameLayout>
+
+
+        <com.gauravk.bubblenavigation.BubbleNavigationConstraintView
+            android:id="@+id/top_navigation_constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            android:elevation="4dp"
+            android:padding="12dp"
+            app:bnc_mode="spread">
+
+            <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/c_item_rest1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bt_active="true"
+                app:bt_colorActive="@android:color/black"
+                app:bt_colorInactive="@android:color/darker_gray"
+                app:bt_icon="@drawable/home"
+                app:bt_padding="@dimen/internal_padding"
+                app:bt_shape="@drawable/default_rounded"
+                app:bt_title="Correspondence"
+                app:bt_titlePadding="@dimen/title_padding" />
+
+            <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/c_item_rest2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bt_active="true"
+                app:bt_colorActive="@android:color/black"
+                app:bt_colorInactive="@android:color/darker_gray"
+                app:bt_icon="@drawable/ic_baseline_insert_drive_file_24"
+                app:bt_padding="@dimen/internal_padding"
+                app:bt_shape="@drawable/default_rounded"
+                app:bt_title="Document"
+                app:bt_titlePadding="@dimen/title_padding" />
+
+            <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/c_item_rest3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bt_active="true"
+                app:bt_colorActive="@android:color/black"
+                app:bt_colorInactive="@android:color/darker_gray"
+                app:bt_icon="@drawable/correspondence_replied"
+                app:bt_padding="@dimen/internal_padding"
+                app:bt_shape="@drawable/default_rounded"
+                app:bt_title="Household"
+                app:bt_titlePadding="@dimen/title_padding" />
+
+            <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/c_item_rest4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bt_active="true"
+                app:bt_colorActive="@android:color/black"
+                app:bt_colorInactive="@android:color/darker_gray"
+                app:bt_icon="@drawable/correspondence_partial"
+                app:bt_padding="@dimen/internal_padding"
+                app:bt_shape="@drawable/default_rounded"
+                app:bt_title="Old and New"
+                app:bt_titlePadding="@dimen/title_padding" />
+
+            <!-- Add more child items here - max upto 5 -->
+
+        </com.gauravk.bubblenavigation.BubbleNavigationConstraintView>
+    </RelativeLayout>
+</LinearLayout>

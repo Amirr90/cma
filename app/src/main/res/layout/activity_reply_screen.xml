@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddReplyScreen">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/addReply_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="3dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/addReply_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ToolbarTheme" />
+
+    </androidx.cardview.widget.CardView>
+   <ScrollView
+       android:layout_below="@+id/addReply_cardView"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <TextView
+               android:id="@+id/textView5"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:layout_marginLeft="10dp"
+               android:fontFamily="monospace"
+               android:paddingLeft="10dp"
+               android:text="Subject here"
+               android:textColor="@color/fui_bgGitHub"
+               android:textSize="20sp"
+               android:textStyle="bold" />
+
+           <TextView
+               android:id="@+id/time"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/textView5"
+               android:layout_marginStart="10dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginEnd="10dp"
+               android:layout_marginRight="10dp"
+               android:layout_marginBottom="10dp"
+               android:fontFamily="monospace"
+               android:paddingLeft="10dp"
+               android:text="today 10:26:54"
+               android:textColor="@android:color/darker_gray"
+               android:textSize="14sp" />
+
+           <EditText
+               android:background="@drawable/corner"
+               android:layout_marginRight="10dp"
+               android:layout_marginLeft="10dp"
+               android:id="@+id/editText3"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/_100sdp"
+               android:layout_below="@id/time"
+               android:ems="10"
+               android:scrollbars="vertical"
+               android:inputType="textMultiLine"
+               />
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:visibility="gone"
+               android:layout_below="@+id/editText3"
+               android:layout_margin="10dp"
+               android:layout_marginTop="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               tools:listitem="@layout/picked_image_view"
+               android:id="@+id/picked_image_rec_reply"/>
+
+           <LinearLayout
+               android:id="@+id/addFile_lay"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:weightSum="2"
+               android:layout_marginRight="20dp"
+               android:layout_marginLeft="20dp"
+               android:layout_below="@id/picked_image_rec_reply">
+
+
+               <TextView
+                   android:gravity="center"
+                   android:id="@+id/addFile"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="15dp"
+                   android:layout_marginRight="@dimen/_5sdp"
+                   android:layout_marginBottom="10dp"
+                   android:layout_weight="1"
+                   android:background="@drawable/text_round_green"
+                   android:drawableRight="@drawable/ic_add_black_24dp"
+                   android:drawablePadding="10dp"
+                   android:fontFamily="monospace"
+                   android:onClick="selectImages"
+                   android:paddingTop="10dp"
+                   android:paddingBottom="10dp"
+                   android:text="Add Image"
+                   android:textColor="@android:color/holo_green_dark"
+                   android:textSize="14sp" />
+
+               <TextView
+                   android:gravity="center"
+                  android:layout_marginLeft="@dimen/_5sdp"
+                   android:layout_marginBottom="10dp"
+                   android:textColor="@color/white"
+                   android:paddingRight="20dp"
+                   android:paddingLeft="20dp"
+                   android:paddingTop="10dp"
+                   android:paddingBottom="10dp"
+                   android:onClick="sendReply"
+                   android:drawablePadding="10dp"
+                   android:drawableRight="@drawable/ic_forward_black_24dp"
+                   android:background="@drawable/text_btn_send"
+                   android:layout_marginTop="15dp"
+                   android:fontFamily="monospace"
+                   android:textSize="16sp"
+                   android:id="@+id/send_btn"
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:layout_height="wrap_content"
+
+                   android:text="Send" />
+           </LinearLayout>
+
+           <TextView
+               android:layout_marginTop="@dimen/_5sdp"
+               android:id="@+id/pdf_files"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/addFile_lay"
+               android:layout_marginStart="10dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginEnd="10dp"
+               android:layout_marginRight="10dp"
+               android:layout_marginBottom="10dp"
+               android:fontFamily="monospace"
+               android:paddingLeft="10dp"
+               android:textColor="@android:color/holo_blue_dark"
+               android:textSize="14sp" />
+
+           <ImageView
+               android:visibility="gone"
+               android:layout_below="@+id/pdf_files"
+               android:layout_marginTop="@dimen/_5sdp"
+               android:id="@+id/preview_image3"
+               android:layout_width="@dimen/_100sdp"
+               android:layout_height="@dimen/_100sdp"/>
+
+           <TextView
+               android:gravity="center_horizontal"
+               android:layout_marginLeft="20dp"
+               android:paddingBottom="10dp"
+               android:paddingTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:onClick="addPdf"
+               android:layout_marginRight="20dp"
+               android:drawablePadding="10dp"
+               android:background="@drawable/text_round_green"
+               android:layout_marginTop="15dp"
+               android:fontFamily="monospace"
+               android:textSize="16sp"
+               android:id="@+id/addPdf_btn"
+               android:textColor="@android:color/holo_green_dark"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/preview_image3"
+               android:text="Add file" />
+
+       </RelativeLayout>
+   </ScrollView>
+
+    <ProgressBar
+        android:elevation="10dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar3"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

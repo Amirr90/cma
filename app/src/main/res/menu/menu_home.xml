@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.e.arena.HomeActivity">
+    <item
+        android:icon="@drawable/ic_monetization_on_black_24dp"
+        android:id="@+id/action_donate_screen"
+        android:orderInCategory="100"
+        android:title="@string/action_scan_code"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_drafts"
+        android:orderInCategory="100"
+        android:title="@string/draft"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/ic_notifications_black_24dp"
+        android:orderInCategory="100"
+        android:title="@string/action_notifications"
+        app:showAsAction="never" />
+
+
+</menu>

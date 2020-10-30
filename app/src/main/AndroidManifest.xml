@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jccode.mycorrespondence">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name=".Offline"
+        android:allowBackup="true"
+        android:icon="@drawable/correspondencelogo"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/correspondencelogo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LiveDocumentScreen"></activity>
+        <activity
+            android:name=".ui.login.LiveDocumentScreen"
+            android:label="@string/title_activity_live_document_screen" />
+        <activity android:name=".SharedDocumentDetail" />
+        <activity android:name=".ViewListSharedDocuments">
+            <intent-filter>
+                <action android:name="com.cmaadmin.CorrespondenceActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DocumentDetail" />
+        <activity android:name=".ViewAllDocumentActivity" />
+        <activity android:name=".AddDocumentActivity" />
+        <activity android:name=".HomeScreen3" />
+        <activity android:name=".ViewSharedCorrespondingDetail" />
+        <activity android:name=".ListSharedDocumentsActivity" />
+        <activity android:name=".ShareCorrespondenceActivity" />
+        <activity android:name=".PdfListWithLetterNumberActivity" />
+        <activity android:name=".ShowCorrespondence" />
+        <activity android:name=".HomeScreen2" />
+        <activity android:name=".PdfLetterNumer" />
+        <activity android:name=".UserProfile" />
+        <activity android:name=".ShowAllUsers" />
+        <activity android:name=".ShowAllChats" />
+        <activity android:name=".ViewAllLettersActivity" />
+        <activity android:name=".PDFViewer" />
+        <activity android:name=".FullScreenImageScreen" />
+        <activity android:name=".AttachmentScreen" />
+        <activity android:name=".HomeScreen" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ShowComposeDetail" />
+        <activity android:name=".ChatUsScreen">
+            <intent-filter>
+                <action android:name="com.jccode.mycorrespondence.ChatUsScreen" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".PreviewScreen" />
+        <activity android:name=".ComposeReply" />
+        <activity android:name=".ComposeCorrespondence" />
+        <activity android:name=".DonateHistoryScreen">
+            <intent-filter>
+                <action android:name="com.jccode.mycorrespondence.DonateHistoryScreen" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DraftsScreen" />
+        <activity android:name=".DonateActivity" />
+        <activity android:name=".PdfScreen" />
+        <activity android:name=".ViewAllReplyScreen" />
+        <activity android:name=".CreateCorrespondenceScreen" />
+        <activity android:name=".AddReplyScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CorrespondingDetail"
+            android:parentActivityName=".HomeScreen" />
+        <activity android:name=".Profile" />
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.jccode.mycorrespondence"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

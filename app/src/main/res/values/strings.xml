@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">MyCorrespondence</string>
+
+    <string name="action_scan_code">Donate Some Love</string>
+    <string name="draft">Draft</string>
+    <string name="action_notifications">Notifications</string>
+    <string name="select_gender">Select Gender</string>
+    <string name="select_post">Select Post</string>
+    <string name="msg_subscribed">subscribed</string>
+    <string name="msg_subscribe_failed">subcription failed</string>
+    <string name="reminder">"Reminder "</string>
+    <string name="pick_image_intent_text">Pick Image</string>
+    <string-array name="choices">
+        <item>Banker</item>
+        <item>Other</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="coming_soon">coming soon</string>
+    <string name="profile_post">Service/Business/Students/Other</string>
+    <string name="remarks">This is My Remark This is My Remark This is My Remark</string>
+    <string name="title_activity_live_document_screen">LiveDocumentScreen</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="description">Description</string>
+    <string name="delete_document">Delete Document</string>
+</resources>

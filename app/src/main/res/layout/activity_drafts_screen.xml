@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DraftsScreen">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/draft_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="3dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/draft_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ToolbarTheme" />
+
+    </androidx.cardview.widget.CardView>
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/draft_progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.dinuscxj.refresh.RecyclerRefreshLayout
+        android:layout_below="@+id/draft_cardView"
+        android:id="@+id/draft_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            app:stackFromEnd="true"
+            app:reverseLayout="true"
+            android:id="@+id/draft_rec"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            tools:listitem="@layout/all_reply_view" />
+
+    </com.dinuscxj.refresh.RecyclerRefreshLayout>
+</RelativeLayout>
+
